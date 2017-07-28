@@ -1,9 +1,53 @@
-#sandwich-menu{
-    position: absolute;
-    margin: 5px;
-    padding: 10px;
-width: 60px;
-height: 60px;
-left: 36px;
-top: 36px;
+.ham_menu{
+
+position: absolute;
+width: 57px;
+height: 36px;
+left: 43px;
+top: 56.5px;
+
+border: 3px solid #333333;
+
+}
+
+.resume{
+
+position: absolute;
+width: 397px;
+height: 269px;
+left: 601px;
+top: 103px;
+
+background: #F2C94C;
+box-shadow: 20px 20px 25px #E0E0E0;
+border-radius: 4px;
+
+}
+
+.work{
+
+position: absolute;
+width: 397px;
+height: 269px;
+left: 601px;
+top: 103px;
+
+background: #F2C94C;
+box-shadow: 20px 20px 25px #E0E0E0;
+border-radius: 4px;
+
+}
+
+.about_me{
+    /* About */
+
+position: absolute;
+width: 172px;
+height: 172px;
+left: 369px;
+top: 432px;
+
+background: #75C9B1;
+box-shadow: 20px 20px 25px #E0E0E0;
+
 }
