@@ -1,0 +1,22 @@
+.name-title{
+ position: absolute;
+ width: 100%;
+ align-content:center;
+ float: left;
+ margin: 20px;
+ padding: 5px;
+ top: 60%;   
+}
+
+
+#name{
+    font-size: 5em;
+    text-align: center;
+}
+#title{
+    font-size: 2em;
+    text-align: center;
+}
+
+
+
