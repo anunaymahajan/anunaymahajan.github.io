@@ -65,4 +65,11 @@ a:hover{
 .navbar-icon{font-size:125%;
   display:inline-block!important
 }
-.navbar.navbar-default{border-top:var(--border-width) solid var(--accent)}footer{border-bottom:var(--border-width) solid var(--accent)}
+
+.navbar.navbar-default{
+  border-top:var(--border-width) solid var(--accent)
+}
+
+footer{
+  border-bottom:var(--border-width) solid var(--accent)
+}
