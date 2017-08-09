@@ -94,7 +94,7 @@ crossorigin="anonymous"></script>
                     
                         <ul class="nav navbar-nav">
                             
-                                <li><a href="/"  onClick="ga('send', 'event', 'Link', 'Click', 'CV');" >Home</a></li>
+                                <li><a href="/"  onClick="ga('send', 'event', 'Link', 'Click', 'Home');" >Home</a></li>
                             
                                 <li><a href="/about/" target="_blank">About</a></li>
                             
@@ -164,7 +164,7 @@ crossorigin="anonymous"></script>
 			function handleOutboundLinkClicks(event) {
   ga('send', 'event', {
     eventCategory: 'Outbound Link',
-    eventAction: 'click',
+    eventAction: 'Click',
     eventLabel: event.target.href
   });
 }
