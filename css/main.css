@@ -1,127 +1,76 @@
-main {
-	display: flex;
-	overflow: hidden;
-	height: 100vh;
+body,html{
+  height:100%
 }
 
-a:hover {
-	color: #EB5757;
+body{
+  padding-top:55px;
+  display:flex;
+  text-align:center;
+  flex-direction:column
 }
 
-a:focus {
-	outline: none;
+main{
+  margin:auto;
+  padding:25px;
+  flex:1 0 auto;
+  max-width:750px
 }
 
-/* Content */
-.content,
-.content__inner {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: flex;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+.copyright{
+  margin:15px 0
 }
 
-.content__inner {
-	z-index: 100;
-	flex-direction: column;
-	align-content: flex-start;
-	padding: 2.5em 2.5em 0;
+.intro{
+  margin:25vh 0
 }
 
-.content__top {
-	display: flex;
-	align-items: center;
-	flex: none;
-	width: 100%;
+.intro>h1{
+  color:#212121;
+  font-size:12vh
 }
 
-.menu {
-	font-size: 1.85em;
-	flex: none;
-	width: 100%;
-	margin: 2em 0 0 auto;
-	text-align: right;
+.intro>h2{
+  color:#757575;
+  font-size:3vmin
 }
 
-.menu__inner {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+a:link,a:visited{
+  color:var(--accent)
 }
 
-.menu--code {
-	font-size: 1em;
-	flex: none;
-	width: 100%;
-	margin: auto 0 2em 0;
-	text-align: left;
+a.icon:hover{
+  text-decoration:none
 }
 
-.menu:not(.menu--code) .menu__item {
-	position: relative;
+a:hover{
+  color:var(--accent)!important
 }
 
-.menu__item:not(:last-child) {
-	margin: 0 0 0.25em 0;
+.pages{
+  padding:15px 0
 }
 
-.js .menu--code {
-	display: none;
+.pages-icon{
+  padding:0 15px
 }
 
-.menu__link {
-	display: inline-block;
+.item{
+  padding:10px 0
 }
 
-.menu--code .menu__link:hover {
-	color: #EB5757;
+.item-tag{
+  background-color:var(--accent)
 }
 
-
-@media screen and (max-height: 38.5em) {
-	.menu {
-		text-align: left;
-	}
+.navbar-icon{
+  font-size:125%;
+  display:inline-block!important
 }
 
-@media screen and (max-width: 40em) {
-	.content__top {
-		font-size: 0.5em;
-	}
-	.content__bottom {
-		font-size: 0.85em;
-	}
-	.menu {
-		font-size: 1em;
-    }
+.navbar.navbar-default{
+  border-top:var(--border-width) solid var(--accent)
 }
 
-
-
-.container {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+footer{
+  border-bottom:var(--border-width) solid var(--accent)
 }
