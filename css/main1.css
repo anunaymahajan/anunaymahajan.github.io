@@ -73,3 +73,28 @@ a:hover{
 footer{
   border-bottom:var(--border-width) solid var(--accent)
 }
+
+.cta
+{
+  border-radius: 5px;
+  border: 1.5px solid #E74C3C;
+    color: rgb(41, 41, 41);
+    padding: 10px 28px;
+    font-size: 14px;
+    background-color:white;
+    cursor: pointer;
+}
+
+.cta:hover
+{
+    background-color:#E74C3C;
+    color:white;
+  border: none;
+}
+
+.cta:focus
+{
+  background-color:#a52e1c;
+  color:white;
+  border:none;
+}

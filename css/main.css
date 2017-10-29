@@ -34,6 +34,10 @@ main{
   font-size:3.2vmin
 }
 
+.about{
+  margin: 25vh 0
+}
+
 a:link,a:visited{
   color:var(--accent)
 }
@@ -74,3 +78,5 @@ a:hover{
 footer{
   border-bottom:var(--border-width) solid var(--accent)
 }
+
+
