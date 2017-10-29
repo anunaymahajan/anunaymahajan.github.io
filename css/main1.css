@@ -62,8 +62,7 @@ a:hover{
   background-color:var(--accent)
 }
 
-.navbar-icon{
-  font-size:125%;
+.navbar-icon{font-size:125%;
   display:inline-block!important
 }
 
