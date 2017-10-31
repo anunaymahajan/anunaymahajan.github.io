@@ -34,10 +34,6 @@ main{
   font-size:3.2vmin
 }
 
-.about{
-  margin: 25vh 0
-}
-
 a:link,a:visited{
   color:var(--accent)
 }
