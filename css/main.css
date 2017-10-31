@@ -75,4 +75,6 @@ footer{
   border-bottom:var(--border-width) solid var(--accent)
 }
 
-
+.myphoto{
+  padding:5px
+}
