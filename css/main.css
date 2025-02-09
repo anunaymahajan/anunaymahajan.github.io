@@ -1,38 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
 body,html{
   height:100%
 }
 
+html{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* * {
+  box-sizing: border-box;
+  } */
+
 body{
-  padding-top:55px;
   display:flex;
-  text-align:center;
-  flex-direction:column
+  flex-direction:column;
+  margin:0;
 }
 
 main{
   margin:auto;
-  padding:25px;
+  padding-top: 24px;
   flex:1 0 auto;
-  max-width:750px
+  max-width:720px;
 }
 
 .copyright{
-  margin:15px 0
+  margin:16px 0
 }
 
 .intro{
-  margin:25vh 0
+  /* align-items: flex-start; */
+  padding: 80px 24px;
+  margin:auto;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  max-width:780px;
 }
 
 .intro>h1{
-  color:#212121;
-  font-size:12vh
+  font-family: Inter, serif;
+  text-align: center;
+  font-weight:500;
+  color:#ffffff;
+  font-size:6rem;
 }
 
 .intro>h2{
-  color:#757575;
-  font-size:3.2vmin
+  font-family: Inter, serif;
+  text-align: center;
+  line-height: 1.2;
+  font-weight:300;
+  color:#ffffff;
+  font-size:2.5rem;
 }
+
+@media only screen and (max-width: 400px) {
+  .intro>h1 {
+      font-size: 4rem;
+  }
+
+  .intro>h2{
+    font-size:2rem;
+  }
+
+}
+
 
 a:link,a:visited{
   color:var(--accent)
@@ -47,11 +87,11 @@ a:hover{
 }
 
 .pages{
-  padding:15px 0
+  padding:16px 0
 }
 
 .pages-icon{
-  padding:0 15px
+  padding:0 16px
 }
 
 .item{
@@ -62,17 +102,33 @@ a:hover{
   background-color:var(--accent)
 }
 
-.navbar-icon{
+/* .navbar-icon{
   font-size:125%;
   display:inline-block!important
 }
 
-.navbar.navbar-default{
+.navbar-default {
+  background-color: #000000;
+  border-color: #202020;
+} */
+
+/* .navbar.navbar-default{
   border-top:var(--border-width) solid var(--accent)
-}
+} */
+
 
 footer{
-  border-bottom:var(--border-width) solid var(--accent)
+  padding: 24px;
+  align-items: center;
+}
+
+footer p{
+  font-family: Inter, serif;
+  text-align: center;
+  line-height: 1.1;
+  font-weight:300;
+  color:#ffffff;
+  font-size:1.2rem;
 }
 
 .myphoto{
@@ -81,15 +137,3 @@ footer{
 
 canvas{ display:block;}
 
-
-#particles-js{
-position:absolute;
-width:100%;
-height:150px;
-  background-color: #ffffff;
-  background-image: url('');
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-top:0;
-}
