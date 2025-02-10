@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary: #00D390;
+    --background: #ffffff;
+    --text: #1a1a1a;
+    --text-light: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 102;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 102;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--text);
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.menu-toggle span:nth-child(3) { bottom: 0; }
+
+.menu-toggle:hover span {
+    background: var(--primary);
+}
+
+.menu-open .menu-toggle span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.menu-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .menu-toggle span:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 50%;
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-open .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-nav {
+    text-align: center;
+}
+
+.menu-link {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--text);
+    text-decoration: none;
+    padding: 1rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: color 0.3s ease, transform 0.5s ease, opacity 0.5s ease;
+}
+
+.menu-open .menu-link {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.menu-link:hover {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.content {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.hero-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-light);
+    max-width: 720px;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+}
+
+.accent {
+    color: var(--primary);
+}
+
+.dark {
+    color: var(--text);
+}
+
+/* CTA Button */
+.cta-button {
+    display: block;
+    margin: 2rem auto;
+    padding: 12px 24px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text);
+    background: none;
+    border: 1px solid #828282;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;  /* Adjusted for proper placement */
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: rgba(0, 211, 144, 0.1);
+    border-color: var(--primary);
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.1;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover::before {
+    transform: scale(1);
+}
+
+/* Home Arrow (Positioned & Animated) */
+.home-arrow {
+    display: block;
+    margin: 20px auto 0;  /* Positioned under button */
+    width: 30px;
+    height: 30px;
+    fill: var(--text);
+    transition: transform 0.3s ease;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* Bouncing Animation for Arrow */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Animations */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Page Transitions */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    z-index: 1000;
+    transform: translateY(100%);
+}
+
+.transitioning .page-transition {
+    transform: translateY(0);
+    transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-text {
+        font-size: 1.25rem;
+    }
+    
+    .menu-link {
+        font-size: 2rem;
+    }
+}
+
+/* Navigation Bar */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* Grouping Theme Toggle & Hamburger */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+/* Theme Icon */
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    transition: transform 0.3s ease;
+}
+
+/* Dark Mode */
+[data-theme="dark"] #theme-icon {
+    transform: rotate(180deg);
+}
